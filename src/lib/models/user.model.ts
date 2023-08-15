@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
     },
     bio:String,
     threads:[{
-        type:mongoose.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:'Thread'
     }],
     onboarded:{
@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
         default:false
     },
     communities:[{
-        type:mongoose.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:'Community'
     }],
     image:String

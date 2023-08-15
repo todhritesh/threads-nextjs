@@ -36,3 +36,18 @@ export async function updateUser({userId,username,bio,image,name,path}:updateUse
     }
 }
 
+
+export async function fetchUser(userId:string){
+    try{
+        connectToDB()
+
+        return await User.findOne({id:userId})
+        // .populate({
+        //     path:'communities',
+        //     model:'Community'
+        // })
+    }catch(err:any){
+        new Error(`Failed to fetch user ${err.message}`)
+    }
+}
+

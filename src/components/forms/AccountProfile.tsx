@@ -114,6 +114,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                             <FormControl className="flex-1 text-base-semibold text-gray-200" >
                                 <Input type="file" accept="image/*" placeholder="Upload a photo" className="account-form_image-input" onChange={(e)=>handleImage(e,field.onChange)}  />
                             </FormControl>
+                            <FormMessage />
                         </FormItem>
                     )}
                 />
@@ -129,6 +130,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                             <FormControl >
                                 <Input {...field} type="text" placeholder="" className="account-form_input no-focus"  />
                             </FormControl>
+                            <FormMessage />
                         </FormItem>
                     )}
                 />
@@ -143,6 +145,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                             <FormControl >
                                 <Input {...field} type="text" placeholder="" className="account-form_input no-focus"  />
                             </FormControl>
+                            <FormMessage />
                         </FormItem>
                     )}
                 />
@@ -157,6 +160,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                             <FormControl  >
                                 <Textarea {...field} rows={10} placeholder="" className="account-form_input no-focus"  />
                             </FormControl>
+                            <FormMessage />
                         </FormItem>
                     )}
                 />
